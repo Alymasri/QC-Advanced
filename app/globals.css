@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--brand: #b62e32;
+	--brand-50: #f8ebeb;
+	--light-brand: #fcf7f7;
+	--highlight-bg: #b62e320a;
+	--highlight-bg-2: #2d2d2b08;
+	--highlight-bg-3: #fcf7f7;
+	--highlight-bg-4: #f8ebeb;
+	--tag: #f5edc7;
+	--text: #777e90;
+	--black: #2d2d2b;
+	--white: #ffffff;
+	--gray: #e1e1e1;
+	--grey: #3c3c4399;
+	--transparent-bg: #111111bf;
+	--shadow: #0f132740;
+	--outline: #2d2d2b0a;
+	--green: #a2b639;
+	--blue: #2a85b1;
+
+	--green-2: #61b639;
+	--green-50: #61b6392c;
+	--brand-50: #b62e322c;
+
+	--card: #f8f8f8;
+	--card-50: #f8f8f81d;
+	--card-border: 1px solid #f0f0f0;
+	--border: #f0f0f0;
+
+	--rounding: 24px;
+	--sidebar: 400px;
+
+	--swiper-pagination-color: var(--brand);
+}
+
+* {
+	scrollbar-color: var(--gray) #ffffff00;
+}
+
+*::-webkit-scrollbar {
+	width: 8px !important;
+	height: 8px !important;
+}
+*::-webkit-scrollbar-thumb {
+	/* Foreground */
+	background: var(--card);
+}
+*::-webkit-scrollbar-track {
+	/* Background */
+	background: #ffffff00;
+}
+
+.scroll-2 {
+	scrollbar-color: var(--gray) var(--white) !important;
+}
+
+h1 {
+	@apply text-[5.5vw] md:text-2xl font-semibold text-[--white];
+}
+h2 {
+	@apply text-[5vw] md:text-xl font-semibold text-[--black];
+}
+
+h3 {
+	@apply text-[4.5vw] md:text-base font-semibold text-[--black];
+}
+p,
+.black-text,
+.p,
+.options-btn,
+a {
+	@apply text-[3.9vw] md:text-sm text-[--text] font-normal !leading-relaxed;
+}
+textarea {
+	@apply w-full min-h-[200px] resize-none p-2 rounded-lg outline-1 outline-[--border] text-[3.9vw] md:text-sm;
+}
+textarea:-webkit-autofill {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: var(--black) !important;
+}
+input:-webkit-autofill,
+.input:-webkit-autofill {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: var(--black) !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+.btn-1 {
+	@apply p-[0.75rem] px-[1rem] bg-[--brand] w-full text-[--white] uppercase cursor-pointer rounded-lg text-[4vw] md:text-sm shadow-[--shadow] text-center;
+}
+.btn-1-v2 {
+	@apply p-[0.65rem] px-[1.5rem] bg-[--brand] w-full text-[--white] cursor-pointer rounded-lg text-[3.9vw] md:text-sm shadow-[--shadow] text-center;
+}
+.btn-2 {
+	@apply p-[0.75rem] px-[1rem] bg-[--highlight-bg-2] w-full text-[--black] cursor-pointer uppercase rounded-lg text-[4vw] md:text-sm shadow-[--shadow] text-center;
+}
+
+.btn-2-v2 {
+	@apply p-[0.65rem] px-[1.5rem] bg-[--highlight-bg-2] w-full text-[--black] cursor-pointer rounded-lg text-[3.9vw] md:text-sm shadow-[--shadow] text-center;
+}
+
+.btn-group {
+	@apply flex flex-col gap-2;
+}
+
+.btn-3 {
+	@apply p-2 bg-[--highlight-bg-2] w-full text-[--black] rounded-md text-[3.9vw] md:text-sm shadow-[--shadow] text-center;
+}
+
+.black-text,
+.options-btn {
+	@apply !text-[--black] !capitalize !font-medium;
+}
+
+.auth-container {
+	@apply relative w-full md:w-auto max-w-[900px] md:min-w-[375px] max-h-[80%] p-0 h-screen md:h-auto pt-[10vh] md:pt-0 overflow-auto;
+}
+
+.flex-v-center {
+	@apply flex items-center gap-3;
+}
+.flex-center {
+	@apply flex items-center justify-center gap-3 w-full;
+}
+.pb {
+	@apply h-[90px] lg:h-[10px];
+}
+.popup-pb {
+	@apply h-[10px] lg:h-[10px];
+}
+
+.tag {
+	@apply py-2 px-5 lg:px-8 border border-[--text] rounded-md text-sm capitalize text-[--text];
+}
+
+.tab {
+	@apply text-[--text] capitalize border-b-2 font-medium pb-1 px-3 w-auto border-transparent;
+}
+
+.textarea {
+	@apply !bg-transparent !min-h-[120px] !p-0 !outline-none;
+}
+/* .textarea-2 {
+	@apply !bg-transparent !min-h-[120px] !p-0 !outline-none;
+} */
+
+.options-btn {
+	@apply p-4 !border !border-[--border] flex-1;
+}
+
+.pending {
+	@apply pointer-events-none opacity-50;
+}
+
+/* ! FORMS */
+.input-block {
+	@apply space-y-2;
+}
+
+label {
+	@apply text-[--black] text-[4vw] md:!text-sm font-medium;
+}
+
+.icon-input {
+	@apply flex gap-3 p-3 bg-[--highlight-bg-2] border-[--highlight-bg-2] rounded-lg shadow-[--shadow] text-[3.9vw] md:text-sm;
+}
+
+.icon-input-2 {
+	@apply flex gap-3 p-3 bg-[--card-50] border-[--highlight-bg-2] rounded-lg shadow-[--shadow] text-[3.9vw] md:text-sm;
+}
+
+.input-img {
+	@apply w-[20px] min-w-[20px] max-w-[20px] h-auto object-contain;
+}
+
+input,
+.input {
+	@apply w-full bg-transparent outline-none border-none text-[3.9vw] md:text-sm;
+}
+
+.footer-link {
+	@apply hover:text-[--brand] hover:scale-105 transition duration-500;
+}
+
+/* ! NAVIGATION */
+.sidenav-link {
+	@apply w-full flex gap-2 items-center text-[--text] p-3 rounded-lg hover:shadow font-medium hover:bg-[--highlight-bg-2] transition duration-1000 text-base;
+}
+
+.bottomnav-link {
+	@apply text-[3.9vw] text-[--text] flex flex-col items-center gap-1 pt-2 border-t-2 border-transparent;
+}
+
+/* ! DASHBOARD */
+.dashboard-content-box {
+	@apply w-full bg-[--white] shadow shadow-[--shadow] h-[85vh] md:h-[85vh] rounded-t-[--rounding] md:rounded-[--rounding] overflow-auto;
+}
+
+/* ! POPUPS */
+
+.popup-container {
+	@apply absolute top-0 right-0 w-full md:w-[--sidebar] h-full pt-[15vh] md:pt-0;
+}
+
+.popup-content-box {
+	@apply w-full !bg-[--white] shadow-inner shadow-white h-[85vh] md:h-full md:pt-[80px] pb-[80px] md:pb-0 rounded-t-[--rounding] md:rounded-none overflow-auto;
+}
+
+.popup-button {
+	@apply bg-[--white] md:bg-[--card] w-[35px] max-w-[35px] min-w-[35px] h-[35px] max-h-[35px] p-[9px] md:p-[8px] rounded-full flex-center;
+}
+
+.shadow-t {
+	box-shadow: inset 0 0 40px 50px #fff !important;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+/* ! DATE PICKER CUSTOMIZATION */
+.rdp-root {
+	--rdp-accent-color: ;
+}
+
+/* ! LANDING PAGE */
+.container {
+	@apply px-4 md:px-[3rem] lg:px-[4rem] max-w-[1240px] mx-auto;
+}
+
+.header {
+	@apply text-[--black] font-bold  text-[9vw] leading-[11vw] md:text-[3rem] md:leading-[3.3rem] xl:text-[3.7rem] xl:leading-[4rem];
+}
+
+.h1 {
+	@apply text-[--black] font-bold  text-[7vw] leading-[9vw] md:text-[2rem] md:leading-[2.5rem] xl:text-[2.1rem] xl:leading-[2.65rem];
+}
+
+.navlinks {
+	@apply text-[--black] text-sm font-medium hover:!text-[--brand] active:!text-[--brand];
+}
+/* 
+.react-time-picker__inputGroup {
+	@apply !border-none !h-[50px];
+}
+
+.react-time-picker__inputGroup input {
+	@apply !h-[50px] !bg-[--card] !rounded-lg !w-[50px] min-w-[50px] max-w-[50px] text-center tracking-wider;
+}
+
+.react-time-picker__wrapper {
+	@apply !border-none;
+} */
+
+.mySwiper .swiper-slide {
+	@apply w-full md:w-[calc(50%-10px)];
+}

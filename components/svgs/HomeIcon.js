@@ -1,0 +1,32 @@
+'use client';
+
+import { useState } from 'react';
+
+export default function HomeIcon({ color }) {
+	return (
+		<div>
+			<svg
+				width="24"
+				height="25"
+				viewBox="0 0 24 25"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M12 18.5V15.5"
+					stroke={color}
+					stroke-width="1.5"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+				<path
+					d="M10.0698 3.31985L3.13978 8.86985C2.35978 9.48985 1.85978 10.7998 2.02978 11.7798L3.35978 19.7398C3.59978 21.1598 4.95978 22.3098 6.39978 22.3098H17.5998C19.0298 22.3098 20.3998 21.1498 20.6398 19.7398L21.9698 11.7798C22.1298 10.7998 21.6298 9.48985 20.8598 8.86985L13.9298 3.32985C12.8598 2.46985 11.1298 2.46985 10.0698 3.31985Z"
+					stroke={color}
+					stroke-width="1.5"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			</svg>
+		</div>
+	);
+}
