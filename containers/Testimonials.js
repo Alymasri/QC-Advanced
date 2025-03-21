@@ -13,8 +13,8 @@ const Testimonials = () => {
 			<div className="container">
 				<div className="flex-center">
 					<SectionBlock
-						tag="TESTIMONIALS"
-						heading="Check what our clients are saying"
+						tag="THE CEO"
+						heading="Baha, CEO of QC Advaced"
 						wrapperClasses="max-w-[525px] items-center text-center"
 					/>
 				</div>
