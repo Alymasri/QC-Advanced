@@ -1,3 +1,5 @@
+'use client';
+
 const OTPInput = ({
 	id,
 	previousId,
@@ -26,14 +28,17 @@ const OTPInput = ({
 				next.select();
 			} else {
 				const inputGroup = document.getElementById('OTPInputGroup');
-				if (inputGroup && inputGroup.dataset['autosubmit']) {
-					handleSubmit();
+				if (inputGroup) {
+					if (inputGroup && inputGroup.dataset['autosubmit']) {
+						handleSubmit();
+					}
 				}
 			}
 		} else if (e.keyCode >= 65 && e.keyCode <= 90) {
 			return null;
 		}
 	};
+
 	return (
 		<input
 			id={id}
