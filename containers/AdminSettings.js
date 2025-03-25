@@ -81,7 +81,7 @@ export default function AdminSettings() {
 	}, []);
 
 	useEffect(() => {
-		let tab = searchParams.get('tab');
+		let tab = searchParams ? searchParams.get('tab') : '';
 
 		navs.map((nav, i) => {
 			if (tab === nav.link) {

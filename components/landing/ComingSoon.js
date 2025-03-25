@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import Image from 'next/image';
+
 import Lottie from 'react-lottie';
 import * as animationData from '@/assets/lottie/coming-soon.json';
 

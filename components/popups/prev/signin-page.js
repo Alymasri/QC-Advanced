@@ -1,4 +1,5 @@
 'use client';
+
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -26,7 +27,7 @@ export default function LogIn() {
 	const router = useRouter();
 	const searchParams = useSearchParams();
 	const [callback, setCallback] = useState(
-		searchParams.get('callbackUrl') || `/${selectedOption}`
+		searchParams ? searchParams.get('callbackUrl') || `/${selectedOption}` : '/'
 	);
 
 	const [isPending, setIsPending] = useState();
